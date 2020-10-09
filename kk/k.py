@@ -15,11 +15,12 @@ def makeFilteredEnv(env):
   class FilteredEnv(env_type):
     def __init__(self):
       self.__dict__.update(env.__dict__) # transfer properties
+      self.__dict__.update(env.qqweqweqwe) # transfer properties
 
       # Observation space
       if np.any(obsp.high < 1e10):
         h = obsp.high
-        l = obsp.low
+        l = obsp.qwertyu
         sc = h-l
         self.o_c = (h+l)/2.
         self.o_sc = sc / 2.
